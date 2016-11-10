@@ -8,14 +8,22 @@ using namespace std;
 string sendNewBahnhof(string d);
 
 int main ( int argc, int argv[] )
-{
+{	
+
+	int i_port =-1;
+	while(i_port>65535||i_port<0){
+		
+	cout << "Bitte geben Sie den Server-Port ein: " << endl;
+	cin >> i_port;
+}
+
   std::cout << "running....\n";
 
 
   try
     {
       // Create the socket
-      ServerSocket server ( 40000 );
+      ServerSocket server ( i_port);
 
       while ( true )
 	{

@@ -9,10 +9,18 @@ string Bahnhof = "0";
 string fahreNach(string b);
 int main ( int argc, int argv[] )
 {
+
+  cout << "Geben Sie die IP ein." << endl;
+  string s_ip;
+  cin >> s_ip;
+  cout << "Geben Sie den Port ein:" << endl;
+  int i_port;
+  cin >> i_port;
+
   try
     {
 
-      ClientSocket client_socket ( "localhost", 40000 );
+      ClientSocket client_socket ( s_ip, i_port );
 
       std::string reply;
 
